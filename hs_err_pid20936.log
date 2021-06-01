@@ -1,0 +1,178 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 480104 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:63), pid=20936, tid=3360
+#
+# JRE version:  (10.0.2+13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 QuanLyLInhKien.GUINV
+
+Host: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 17134 (10.0.17134.706)
+Time: Wed May 01 13:10:04 2019 SE Asia Standard Time elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001a487f74000):  JavaThread "Unknown thread" [_thread_in_vm, id=3360, stack(0x0000006397900000,0x0000006397a00000)]
+
+Stack: [0x0000006397900000,0x0000006397a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5a01a9]
+V  [jvm.dll+0x6bcf31]
+V  [jvm.dll+0x6be126]
+V  [jvm.dll+0x6be7b3]
+V  [jvm.dll+0x234978]
+V  [jvm.dll+0x29bada]
+V  [jvm.dll+0x69c6bc]
+V  [jvm.dll+0x69eb0f]
+V  [jvm.dll+0x3519e9]
+V  [jvm.dll+0x6856a2]
+V  [jvm.dll+0x3ba0c3]
+V  [jvm.dll+0x3bc261]
+C  [javaw.exe+0x3541]
+C  [javaw.exe+0xe1cf]
+C  [javaw.exe+0xe376]
+C  [KERNEL32.DLL+0x14034]
+C  [ntdll.dll+0x73691]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000001a485e57980, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000001a487f8b800 GCTaskThread "GC Thread#0" [stack: 0x0000006397a00000,0x0000006397b00000] [id=8260]
+  0x000001a487f8e000 GCTaskThread "GC Thread#1" [stack: 0x0000006397b00000,0x0000006397c00000] [id=19604]
+  0x000001a487f92000 GCTaskThread "GC Thread#2" [stack: 0x0000006397c00000,0x0000006397d00000] [id=13860]
+  0x000001a487f95000 GCTaskThread "GC Thread#3" [stack: 0x0000006397d00000,0x0000006397e00000] [id=21416]
+  0x000001a487fd0000 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000006397e00000,0x0000006397f00000] [id=9808]
+  0x000001a487fd3000 ConcurrentGCThread "G1 Conc#0" [stack: 0x0000006397f00000,0x0000006398000000] [id=15344]
+  0x000001a488024800 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000006398000000,0x0000006398100000] [id=20656]
+  0x000001a488027000 ConcurrentGCThread "G1 Refine#1" [stack: 0x0000006398100000,0x0000006398200000] [id=17452]
+  0x000001a488028000 ConcurrentGCThread "G1 Refine#2" [stack: 0x0000006398200000,0x0000006398300000] [id=21500]
+  0x000001a48802b000 ConcurrentGCThread "G1 Refine#3" [stack: 0x0000006398300000,0x0000006398400000] [id=21472]
+  0x000001a48802b800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000006398400000,0x0000006398500000] [id=16772]
+
+=>0x000001a487f74000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=3360, stack(0x0000006397900000,0x0000006397a00000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x00000000c2000000, size: 992 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff744910000 - 0x00007ff74494e000 	C:\Program Files\Java\jdk-10.0.2\bin\javaw.exe
+0x00007ff82c8b0000 - 0x00007ff82ca91000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff81b1f0000 - 0x00007ff81b202000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00007ff82a220000 - 0x00007ff82a2d1000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff828f50000 - 0x00007ff8291c3000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff82a4f0000 - 0x00007ff82a591000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff82c740000 - 0x00007ff82c7de000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff82be50000 - 0x00007ff82beab000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff82bee0000 - 0x00007ff82c004000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff82a090000 - 0x00007ff82a220000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff829280000 - 0x00007ff8292a0000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff82a2e0000 - 0x00007ff82a308000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff828c80000 - 0x00007ff828e12000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8292a0000 - 0x00007ff82933f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff829a50000 - 0x00007ff829b48000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff81c350000 - 0x00007ff81c5b9000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.706_none_fb43a2cb30647007\COMCTL32.dll
+0x00007ff82c010000 - 0x00007ff82c332000 	C:\WINDOWS\System32\combase.dll
+0x00007ff828e20000 - 0x00007ff828e9a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff81d090000 - 0x00007ff81d09a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff82c850000 - 0x00007ff82c87d000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff81b420000 - 0x00007ff81b50f000 	C:\Program Files\Java\jdk-10.0.2\bin\msvcr120.dll
+0x00007ff81ff80000 - 0x00007ff820026000 	C:\Program Files\Java\jdk-10.0.2\bin\msvcp120.dll
+0x0000000051ce0000 - 0x0000000052750000 	C:\Program Files\Java\jdk-10.0.2\bin\server\jvm.dll
+0x00007ff82bec0000 - 0x00007ff82bec8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff817cf0000 - 0x00007ff817cf9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff82c7e0000 - 0x00007ff82c84c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff825cc0000 - 0x00007ff825ce3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff825c90000 - 0x00007ff825cba000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ff828ea0000 - 0x00007ff828ee9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ff823c80000 - 0x00007ff823c8f000 	C:\Program Files\Java\jdk-10.0.2\bin\verify.dll
+0x00007ff816ba0000 - 0x00007ff816d69000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff816b10000 - 0x00007ff816b39000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff81b3f0000 - 0x00007ff81b417000 	C:\Program Files\Java\jdk-10.0.2\bin\java.dll
+0x00007ff823c60000 - 0x00007ff823c76000 	C:\Program Files\Java\jdk-10.0.2\bin\zip.dll
+0x00007ff81ff70000 - 0x00007ff81ff7a000 	C:\Program Files\Java\jdk-10.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-10.0.2\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.706_none_fb43a2cb30647007;C:\Program Files\Java\jdk-10.0.2\bin\server
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: QuanLyLInhKien.GUINV
+java_class_path (initial): T:\java\QuanLyLinhKien\bin;T:\java\QuanLyLinhKien\jgoodies-common-1.8.0.jar;T:\java\QuanLyLinhKien\jgoodies-forms-1.8.0.jar;T:\java\QuanLyLinhKien\Lib\sqljdbc4.jar
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Program Files/Java/jre1.8.0_101/bin/server;C:/Program Files/Java/jre1.8.0_101/bin;C:/Program Files/Java/jre1.8.0_101/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;%%JAVA_HOME%\bin;SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files\Java\jdk-10.0.2\bin;T:\Phan Mem\eclipse-committers-2019-03-R-win32-x86_64\eclipse;
+USERNAME=LENOVO
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17134 (10.0.17134.706)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 4060548k(289496k free), swap 16643460k(4204k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10.0.2+13) for windows-amd64 JRE (10.0.2+13), built on Jun 28 2018 01:57:56 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.

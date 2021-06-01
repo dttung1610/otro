@@ -1,0 +1,54 @@
+﻿--tạo qltrosv:
+
+CREATE DATABASE qltrosv
+ON PRIMARY
+(NAME = QLTROSV_DATA,
+ FILENAME='T:\QLTROSV_DATA.MDF',
+ SIZE=20MB,
+ MAXSIZE=40MB,
+ FILEGROWTH= 1MB)
+ LOG ON
+ (NAME =QLTROSV_LOG,
+ FILENAME='T:\QLTROSV_LOG.LDF',
+ SIZE=6MB,
+ MAXSIZE=8MB,
+ FILEGROWTH= 1MB)
+ --tạo bảng
+ USE qltrosv
+ 
+ CREATE TABLE SINHVIEN
+(
+	MSSV Nchar(20) Not null primary key,
+	HOTEN nvarchar(40) Not null,
+	GIOITINH NVARCHAR(5),
+	QUEQUAN NVARCHAR(30) ,
+	CHUYENNGANH NVARCHAR(60),
+	LOP NVARCHAR(30),
+)
+
+
+ CREATE TABLE NHATRO
+(
+	MANT NCHAR(6) Not null primary key,
+	TENCT NVARCHAR(60),
+	DIACHI NVARCHAR(60) Not null,
+	SDT int Not null,
+)
+
+
+CREATE TABLE OTRO
+(
+	MSSV Nchar(20) ,
+	MANT NCHAR(6),
+	NGAYDEN  DATE,
+	NGAYDI DATE,
+	constraint NS_FK1 foreign key (MSSV) references SINHVIEN(MSSV),
+	constraint NS_FK2 foreign key (MANT) references NHATRO(MANT),
+)
+set dateformat dmy
+select * from NHATRO
+INSERT INTO NHATRO  VALUES ('4', N'Hoài',N'316 Phan Văn Trị', '012333441' )
+
+INSERT INTO SINHVIEN VALUES('17073741',N'Hòa',N'nam',N'bình thuận','cntt','dhth12c')
+	
+INSERT INTO OTRO VALUES('17073741','4','2015-04-03','2016-05-04')
